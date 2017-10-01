@@ -18,7 +18,7 @@ And PIP is dependecy installer that we would use to install the missing dependec
 
 ### HOW TO RUN IT (easy way):
 1. Clone the sources using ```git clone https://github.com/jmcruz1983/RectSky.git```
-2. Run the app generated for Mac-OSx using the terminal and typing ```open ./RectSky.app```
+2. Run the app generated for Mac-OSx using the terminal and typing ```open ./RectSky/RectSky.app```
 3. The application is generated using ```py2App``` utility. See [instructions](https://www.metachris.com/2015/11/create-standalone-mac-os-x-applications-with-python-and-py2app/). 
 
 ### HOW TO RUN IT (more elaborated):
@@ -28,7 +28,7 @@ Usually Tkinter comes as default in most of Python distros. In case it is missin
 3. Download [get-pip.py](https://bootstrap.pypa.io/get-pip.py) for PIP installation. See [instructions](https://pip.pypa.io/en/stable/installing/).
 4. Install PIP using command ```python get-pip.py```
 5. Install Tkinter using ```pip install python-tk```
-6. Run the application using ```python RectSky/RectSky.py```
+6. Run the application using ```python ./RectSky/RectSky.py```
 
 ### NOTES:
 * The application is a GUI-based consisting of a plot area, a text input and action buttons.
