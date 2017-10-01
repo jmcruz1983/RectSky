@@ -24,7 +24,7 @@ And PIP is dependecy installer that we would use to install the missing dependec
 ### HOW TO RUN IT (more elaborated):
 Usually Tkinter comes as default in most of Python distros. In case it is missing you would need to do the following:
 1. Clone the sources using ```git clone https://github.com/jmcruz1983/RectSky.git```
-2. Install Python2.7 using Mac-OSx installer [python-2.7.14-macosx10.6.pkg](https://www.python.org/ftp/python/2.7.14/python-2.7.14-macosx10.6.pkg).See[instructions](https://www.python.org/downloads/release/python-2714/).
+2. Install Python2.7 using Mac-OSx installer [python-2.7.14-macosx10.6.pkg](https://www.python.org/ftp/python/2.7.14/python-2.7.14-macosx10.6.pkg). See [instructions](https://www.python.org/downloads/release/python-2714/).
 3. Download [get-pip.py](https://bootstrap.pypa.io/get-pip.py) for PIP installation. See [instructions](https://pip.pypa.io/en/stable/installing/).
 4. Install PIP using command ```python get-pip.py```
 5. Install Tkinter using ```pip install python-tk```
