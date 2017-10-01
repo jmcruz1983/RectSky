@@ -32,7 +32,7 @@ Usually Tkinter comes as default in most of Python distros. In case it is missin
 
 ### NOTES:
 * The application is a GUI-based consisting of a plot area, a text input and action buttons.
-* Please have a look to the video MP4 video that comes with the code where usage is explained visually.
+* Please have a look to the [RectSky.mp4](RectSky.mp4) video in the repository where usage is explained visually.
 * The application plots vertica skyline in BLUE doted lines and the horizontal skyline in RED doted lines.
 * Hovering over the plot the coordinates are displayed helping to verify the skyline.
 
