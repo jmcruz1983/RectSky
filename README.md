@@ -17,12 +17,12 @@ like PIP.
 And PIP is dependecy installer that we would use to install the missing dependecies, like Tkinter.
 
 ### HOW TO RUN IT (easy way):
-1. Clone the sources
+1. Clone the sources using ```git clone https://github.com/jmcruz1983/RectSky.git```
 2. Run the app generated for Mac-OSx using the terminal and typing ```open ./RectSky.app```
 
 ### HOW TO RUN IT (more elaborated):
 Usually Tkinter comes as default in most of Python distros. In case it is missing you would need to do the following:
-1. Clone the sources
+1. Clone the sources using ```git clone https://github.com/jmcruz1983/RectSky.git```
 2. Install Python2.7 using Mac-OSx installer[python-2.7.14-macosx10.6.pkg](https://www.python.org/ftp/python/2.7.14/python-2.7.14-macosx10.6.pkg).See[instructions](https://www.python.org/downloads/release/python-2714/)
 3. Download[get-pip.py](https://bootstrap.pypa.io/get-pip.py)for PIP installation. See[instructions](https://pip.pypa.io/en/stable/installing/)
 4. Install PIP using command ```python get-pip.py```
@@ -32,6 +32,7 @@ Usually Tkinter comes as default in most of Python distros. In case it is missin
 ### NOTES:
 * The application is a GUI-based consisting of a plot area, a text input and action buttons.
 * Please have a look to the video MP4 video that comes with the code where usage is explained visually.
+* The application plots vertica skyline in BLUE doted lines and the horizontal skyline in RED doted lines.
 * Hovering over the plot the coordinates are displayed helping to verify the skyline.
 
 ### HOW TO USE IT:
