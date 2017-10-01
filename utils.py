@@ -3,6 +3,7 @@ Module that provides utilities for the application
 """
 
 import os
+import sys
 import logging
 
 # Setting logger
@@ -22,8 +23,12 @@ class Utils():
 
     def __init__(self, logLevel=logging.DEBUG):
         log.setLevel(logLevel)
-        self.abs_p = os.path.abspath(os.path.join(__file__, os.pardir))
-        self.json_example_file = os.path.join(self.abs_p, "example_input.json")
+        if dir(sys).__contains__('frozen'): # Mac bundle
+            self.json_example_file = "example_input.json"
+        else:
+            self.abs_p = os.path.abspath(os.path.join(__file__, os.pardir))
+            self.json_example_file = os.path.join(self.abs_p, "example_input.json")
+        log.debug("json_example_file=%s", self.json_example_file)
         log.info("%s(%d) logLevel=%d", self.__class__.__name__, id(self), logLevel)
 
     def __read_file(self, fname=None):
