@@ -17,7 +17,7 @@ log.addHandler(sh)
 
 def parse_cmds():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--verbose", help="Enables verbose logging")
+    parser.add_argument("-v", "--verbose", action='store_true', help="Enables verbose logging")
     args = parser.parse_args()
     parser.print_help()
     if args.verbose:
