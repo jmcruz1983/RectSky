@@ -35,6 +35,7 @@ Usually Tkinter comes as default in most of Python distros. In case it is missin
 * Please have a look to the [RectSky.mp4](RectSky.mp4) video in the repository where usage is explained visually.
 * The application plots vertica skyline in BLUE doted lines and the horizontal skyline in RED doted lines.
 * Hovering over the plot the coordinates are displayed helping to verify the skyline.
+* In case of providing wrong JSON input a popup will appear showing a parsing error and no solution would be provided.
 
 ### HOW TO USE IT:
 Having the application up running:
