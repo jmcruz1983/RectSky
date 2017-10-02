@@ -14,7 +14,11 @@ RectSky requires:
 #### WHY?
 Some packages need to be installed manually as they need user consent and admin priviledges, 
 like PIP.
-And PIP is dependecy installer that we would use to install the missing dependecies, like Tkinter.
+And PIP is dependency installer that we would use to install the missing dependecies, like Tkinter.
+
+### DISCLAIMER:
+* The application was developed and verified using Mac-OSx, therefore running it the "easy way" would work out-the-box.
+* Probably the application might work in other OSes like Linux or Windows. Application was neither developed nor tested in such environments. BUT having the listed python dependencies and running it as explained in the "more elaborated" way MIGHT work.
 
 ### HOW TO RUN IT (easy way):
 1. Clone the sources using ```git clone https://github.com/jmcruz1983/RectSky.git```
