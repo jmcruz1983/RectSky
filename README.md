@@ -12,7 +12,7 @@ RectSky requires:
 * Tkinter (Python's de-facto standard GUI)
 
 #### WHY?
-* Application was developed using my MacBook personal computer.
+* Application was developed using my personal computer.
 * Some packages need to be installed manually as they need user consent and admin privileges, 
 like PIP.
 * And PIP is a dependency installer that we would use to install the needed dependencies, like Tkinter.
