@@ -29,6 +29,15 @@ Usually Tkinter comes as default in most of Python distros. In case it is missin
 4. Install PIP using command ```python get-pip.py```
 5. Install Tkinter using ```pip install python-tk```
 6. Run the application using ```python ./RectSky/RectSky.py```
+    * You can run the application in DEBUG mode using ```python ./RectSky/RectSky.py --verbose```
+    * You can check the command line options offered using ```python ./RectSky/RectSky.py --help``` that will print following message:
+    ```
+    usage: RectSky.py [-h] [-v]
+    
+    optional arguments:
+      -h, --help     show this help message and exit
+      -v, --verbose  Enables verbose logging
+    ``` 
 
 ### NOTES:
 * The application is a GUI-based consisting of a plot area, a text input and action buttons.
