@@ -49,6 +49,7 @@ class Gui():
 
     def _init_vars(self):
         self._tag = None
+        self._tag_result = None
         self._rect_dict = None
         self._base_offset_x = 10
         self._factor = 1.1
@@ -59,8 +60,12 @@ class Gui():
 
     def _add_plot_canvas(self):
         self._plot_canvas = Canvas(self._root, borderwidth=0, bg="#EDEDED")
-        self._plot_canvas.pack(fill=BOTH, expand=YES)
+        self._plot_canvas.pack(side=LEFT)
         self._plot_canvas.bind("<Motion>", self._draw_coords)
+
+        self._plot_canvas_result = Canvas(self._root, borderwidth=0, bg="#EDEDED")
+        self._plot_canvas_result.pack(side=RIGHT)
+        self._plot_canvas_result.bind("<Motion>", self._draw_coords_result)
 
     def _draw_coords(self, event, off_x=10, off_y=0):
         if not self._tag is None:
@@ -69,19 +74,31 @@ class Gui():
             .create_text(event.x+off_x, event.y+off_y,
                          text="(%r, %r)" % (event.x-self._base_offset_x, event.y), anchor="nw")
 
+    def _draw_coords_result(self, event, off_x=10, off_y=0):
+        if not self._tag_result is None:
+            self._plot_canvas_result.delete(self._tag_result)
+        self._tag_result = self._plot_canvas_result\
+            .create_text(event.x+off_x, event.y+off_y,
+                         text="(%r, %r)" % (event.x-self._base_offset_x, event.y), anchor="nw")
+
     def _calculate_coords(self, x, y, w, h):
         x0 = x+self._base_offset_x
         x1 = x0+w
         return x0, y, x1, y-h
 
-    def _plot_rectangle(self, r=None, w=1, outline="black"):
+    def _plot_rectangle(self, r=None, w=1, outline="black", dash=None, source=True):
         if not r is None:
             x0, y0, x1, y1 = self._calculate_coords(r['x'], r['y'], r['width'], r['height'])
-            self._plot_canvas.create_rectangle(x0, y0, x1, y1,
-                                               width=w, outline=outline, dash=(5,10))
+            if source:
+                self._plot_canvas.create_rectangle(x0, y0, x1, y1,
+                                                   width=w, outline=outline, dash=dash)
+            else:
+                self._plot_canvas_result.create_rectangle(x0, y0, x1, y1,
+                                                   width=w, outline=outline, dash=dash)
 
     def _clear_canvas(self):
         self._plot_canvas.delete("all")
+        self._plot_canvas_result.delete("all")
 
     def _add_text_input(self):
         self.txt_in = Text(self._root)
@@ -169,7 +186,7 @@ class Gui():
                 self._rect_dict['rectangles'] = deepcopy(skyLineOut)
                 self._update_text_input()
                 for r in self._rect_dict['rectangles']:
-                    self._plot_rectangle(r, w=2, outline="red")
+                    self._plot_rectangle(r, w=1, outline="red", source=False)
 
     def _plot_example_source_rectangles(self):
         txt = self.utils.get_json_example_input()
